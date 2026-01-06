@@ -1,12 +1,14 @@
 import './App.css'
-import Normal from './DSA- ROADMAP/Arrays and Strings/Normal'
+// import Problem1Array from './Days/Day-1/Problem1Array'
+import Problem2Array from './Days/Day-1/Problem2Array'
 
 function App() {
 
   return (
     <>
       Sevinjeno DSA
-      <Normal />
+      {/* <Problem1Array /> */}
+      <Problem2Array />
     </>
   )
 }
