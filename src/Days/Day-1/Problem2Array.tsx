@@ -1,12 +1,12 @@
 // Build a search box to filter users.
 
 import { useCallback, useState } from "react";
-import {CheckDuplicate} from "./ContainDuplicate.ts"
+import { Anagram } from "./Anagram.ts";
 const Problem2Array = () => {
   const [query, setQuery] = useState("");
-
-  const Dup=CheckDuplicate([1,2,3,4,1])
-  console.log("Dup",Dup)
+   
+  const result=Anagram("abc","cab")
+  console.log("Result",result)
 
   const handleQuery = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
