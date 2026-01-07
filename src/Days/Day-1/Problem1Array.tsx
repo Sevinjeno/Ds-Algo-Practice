@@ -7,13 +7,12 @@ type User = {
     age:number;
 }
 
-
-
 const users : User[] = [
   { id: 1, name: "Alex", age: 25 },
   { id: 2, name: "Sam", age: 30 },
   { id: 3, name: "Riya", age: 22 }
 ];
+
 const Problem1Array = () => {
   return (
     <div>{users.map((user)=>(
