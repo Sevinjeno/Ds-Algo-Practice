@@ -9,36 +9,33 @@ type Todo = {
 
 const Problem3 = () => {
  
-  const [todos, setTodos] = useState<Todo[]>([]);
-  const [text, setText] = useState<string>("");
+  const[Todo,setTodo]=useState<Todo[]>([])
+  const [text,setText]=useState<string>("")
+   
+  function handleText(e: React.ChangeEvent<HTMLInputElement>){
+     const {value}= e.target;
+     setText(value)
+  }
 
-  // 1️⃣ Add item
-  const addTodo = () => {
-    const newTodo: Todo = { id: Date.now(), text };
-    setTodos([...todos, newTodo]); // immutably add
-    setText("");
-  };
+  function AddTodo(){
+      const newTodo:Todo={id:Date.now(),text}
+      setTodo([...Todo,newTodo])
+  }
 
-  // 2️⃣ Remove item
-  const removeTodo = (id: number) => {
-    setTodos(todos.filter((todo) => todo.id !== id));
-  };
+  function remove(id:number){
+  }
 
+
+ 
   return (
     <>
-      <input value={text} onChange={(e) => setText(e.target.value)} />
-      <button onClick={addTodo}>Add</button>
+    <input type="text" value={text} onChange={handleText} />
+    <button onClick={AddTodo}>+Add</button>
+     <div>
 
-      <ul>
-        {todos.map((todo) => (
-          <li key={todo.id}>
-            {todo.text}
-            <button onClick={() => removeTodo(todo.id)}>X</button>
-          </li>
-        ))}
-      </ul>
+     </div>
     </>
-  );
+  )
 }
 
 export default Problem3
